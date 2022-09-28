@@ -1,0 +1,35 @@
+.container{
+    width: 100%;
+}
+
+.listHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.listHeader div{
+    display: flex;
+    align-items: center;
+}
+
+.listHeader span{
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+    padding: 3px 7px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    min-width: 8px;
+    margin-left: 10px;
+}
+
+.listCount{
+    color: var(--blue-400);
+    font-weight: bold;
+}
+
+.tasksFinished{
+    color: var(--purple-400);
+    font-weight: bold;
+}
