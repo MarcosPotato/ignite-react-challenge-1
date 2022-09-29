@@ -10,6 +10,10 @@
     position: relative;
 }
 
+.container + .container{
+    margin-top: 15px;
+}
+
 .container p{
     flex: 1;
     margin: 0px 7px;

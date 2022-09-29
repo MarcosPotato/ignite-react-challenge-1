@@ -6,7 +6,7 @@
     margin-bottom: 52px;
 }
 
-.searchInput{
+.newTaskInput{
     flex: 1;
     margin-right: 5px;
     height: 54px;
@@ -17,11 +17,11 @@
     border: 1px solid var(--gray-700);
 }
 
-.searchInput::placeholder{
+.newTaskInput::placeholder{
     color: var(--gray-300);
 }
 
-.searchButton{
+.newTaskButton{
     border: none;
     border-radius: 8px;
     padding: 0px 20px;
@@ -34,20 +34,20 @@
     transition: 200ms;
 }
 
-.searchButton:hover{
+.newTaskButton:hover{
     filter: opacity(0.8);
 }
 
-.searchButton img{
+.newTaskButton img{
     margin-left: 7px;
 }
 
 @media (max-width: 700px){
-    .searchButton {
+    .newTaskButton {
         font-size: 0
     } 
 
-    .searchButton img{
+    .newTaskButton img{
         margin-left: 0px;
     }
 }
