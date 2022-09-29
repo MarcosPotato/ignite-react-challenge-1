@@ -12,6 +12,10 @@ export const TasksProvider: React.FC<TasksProviderProps> = ({ children }) => {
     const [tasksList, setTasksList] = useState<Task[]>([])
 
     const addTask = useCallback((content: string) => {
+        if(!content){
+            return
+        }
+
         const newId = uuid()
 
         setTasksList(prev => [{
@@ -26,10 +30,10 @@ export const TasksProvider: React.FC<TasksProviderProps> = ({ children }) => {
     },[])
 
     const toggleMark = useCallback((id: string) => {
-        setTasksList(prev => prev.map(task => ({
+        setTasksList(prev => prev.map(task => task.id === id ? ({
             ...task,
             isFinished: !task.isFinished
-        })))
+        }): task))
     },[])
 
     return(

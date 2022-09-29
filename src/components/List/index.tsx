@@ -14,9 +14,9 @@ export function List(){
             <header className={ styles.listHeader }>
                 <div className={ styles.listCount }>
                     <p>Tarefas criadas</p>
-                    <span>{ tasksList.length }</span>
+                    <span>{ tasksList?.length }</span>
                 </div>
-                { tasksList.length > 0 && (
+                { tasksList?.length > 0 && (
                     <div className={ styles.tasksFinished }>
                         <p>Concluídas</p>
                         <span>{ finishedTasks?.length } de { tasksList.length }</span>
@@ -24,7 +24,7 @@ export function List(){
                 )}
             </header>
             <section>
-                { tasksList.length > 0 ? (
+                { tasksList?.length > 0 ? (
                     tasksList.map(task => (
                         <Card key={ task.id } data={ task } />
                     ))
